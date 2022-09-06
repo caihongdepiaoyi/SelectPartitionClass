@@ -33,10 +33,10 @@ public:
 			else {
 				for (i = 1; i <= t; i++) {   //求每一组的中位数
 					insertSort(A, m + (i - 1) * r, m + (i - 1) * r + r - 1);
-					swap(A[m + i - 1], A[m + (i - 1)*r + (int)floor(r/2)]);  //把每一组的中位数都放到前面
+					swap(A[m + i - 1], A[m + (i - 1) * r + (int)floor(r / 2)]);  //把每一组的中位数都放到前面
 				}
 				j = Select(A, m, m + t - 1, (int)floor(t / 2));
-				
+
 				swap(A[m], A[j]);    //把所有组的中位数的中位数放到最前面
 
 				midposition = partition(A, m, p);   //以中位数放到最前面作为分割元素
